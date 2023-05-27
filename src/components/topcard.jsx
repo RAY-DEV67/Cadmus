@@ -58,10 +58,8 @@ export function TopCard(props) {
         title: post.title,
         price1: post.price1,
         price2: post.price2,
-        price3: post.price3,
         size1: post.size1,
         size2: post.size2,
-        size3: post.size3,
         description: post.description,
         category: post.category
       });
