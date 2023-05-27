@@ -21,6 +21,7 @@ export function CheckOut() {
   const [price, setprice] = useState([]);
   const [sum, setsum] = useState(0);
   const [product, setproduct] = useState([]);
+  const [size, setsize] = useState("");
   const [productOrder, setproductOrder] = useState("");
   const [errors, seterrors] = useState("");
   const { id } = useParams();
@@ -268,6 +269,15 @@ setstreet(e.target.value)
                 name="Phone"
               />
               {errors.phone && <p className="error">{errors.phone}</p>}
+              <label className="text-left mt-[0.5rem]">Size</label>
+      <input
+      onChange={(e) => {
+        setsize(e.target.value)
+              }} 
+                className="py-[0.5rem] rounded-[10px] px-[1rem] border border-[#ffc5b9]"
+                type="text"
+                name="Size"
+              />
       <label className="text-left mt-[0.5rem]">Color</label>
       <textarea name="message" className="border-[#ffc5b9] border rounded-[10px]" />
       <label className="text-left mt-[0.5rem] opacity-0">Payment Picture</label>
